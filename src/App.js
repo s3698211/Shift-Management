@@ -1,20 +1,17 @@
-import "./App.css";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Home from "./page/Home";
-import CreateShift from "./page/CreateShift";
-import Shift from "./page/Shift";
+import './App.css';
+import Header from './components/layout/Header';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreateShift from './components/pages/CreateShift';
+
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
-        <div className="navbar">
-          <Link to="/createShift"> Create A Shift</Link>
-          <Link to="/"> Home page</Link>
-        </div>
+        <Header />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/createShift" exact component={CreateShift} />
-          <Route path="/shift/:id" exact component={Shift} />
+          <Route path='/' exact component={Home} />
+          <Route path='/create-shift' exact component={CreateShift} />
         </Switch>
       </Router>
     </div>
