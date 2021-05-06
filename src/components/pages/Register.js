@@ -36,8 +36,11 @@ const tailFormItemLayout = {
 };
 
 const Register = () => {
+  const [form] = Form.useForm();
+
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
+    form.resetFields();
   };
 
   const prefixSelector = (
@@ -58,6 +61,7 @@ const Register = () => {
         <Form
           {...formItemLayout}
           name='register'
+          form={form}
           onFinish={onFinish}
           initialValues={{
             prefix: '+61',

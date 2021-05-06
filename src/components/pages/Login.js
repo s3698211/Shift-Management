@@ -5,8 +5,11 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Login = () => {
+  const [form] = Form.useForm();
+
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
+    form.resetFields();
   };
 
   return (
@@ -15,6 +18,7 @@ const Login = () => {
         <Form
           name='normal_login'
           className='login-form'
+          form={form}
           initialValues={{ remember: true }}
           onFinish={onFinish}
         >
