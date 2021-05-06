@@ -36,8 +36,6 @@ const tailFormItemLayout = {
 };
 
 const Register = () => {
-  const [form] = Form.useForm();
-
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
   };
@@ -59,7 +57,6 @@ const Register = () => {
       <Card title='Register' style={{ width: 500 }}>
         <Form
           {...formItemLayout}
-          form={form}
           name='register'
           onFinish={onFinish}
           initialValues={{
