@@ -16,19 +16,32 @@ const App = () => {
   return (
     <Router>
       <div className='App'>
-        <Menu mode='horizontal'>
-          <Menu.Item key='home' icon={<HomeOutlined />}>
+        <Menu
+          mode='horizontal'
+          style={{
+            fontSize: 20,
+            paddingTop: 5,
+            paddingBottom: 5,
+          }}
+        >
+          <Menu.Item
+            key='home'
+            icon={<HomeOutlined style={{ fontSize: '100%' }} />}
+          >
             Shift Management
             <Link to='/'></Link>
           </Menu.Item>
-          <Menu.Item key='add-shift' icon={<CalendarOutlined />}>
+          <Menu.Item
+            key='add-shift'
+            icon={<CalendarOutlined style={{ fontSize: '100%' }} />}
+          >
             Add a Shift
             <Link to='/add-shift'></Link>
           </Menu.Item>
           <Menu.Item
             style={{ float: 'right' }}
             key='login'
-            icon={<LoginOutlined />}
+            icon={<LoginOutlined style={{ fontSize: '100%' }} />}
           >
             Login
             <Link to='/login'></Link>
