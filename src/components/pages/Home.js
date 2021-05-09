@@ -1,9 +1,14 @@
 import React from 'react';
+import { Calendar } from 'antd';
+
+function onSelect(value) {
+  console.log(value.format('YYYY-MM-DD'));
+}
 
 const Home = () => {
   return (
     <div>
-      <div>Home Page</div>
+      <Calendar onSelect={onSelect} />
     </div>
   );
 };
